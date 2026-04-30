@@ -35,6 +35,14 @@ export const constantRoutes = [
     component: Layout,
     hidden: true,
     children: [
+
+      {
+        path: '/campus/post/detail/:postId',
+        name: 'PostDetail',
+        component: () => import('@/views/campus/post/detail'),
+        hidden: true
+      },
+
       {
         path: '/redirect/:path(.*)',
         component: () => import('@/views/redirect')
@@ -186,4 +194,6 @@ export default new Router({
   mode: 'history', // 去掉url中的#
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRoutes
-})
+}
+
+)
