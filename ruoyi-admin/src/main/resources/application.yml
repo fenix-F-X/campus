@@ -145,3 +145,11 @@ xss:
   excludes: /system/notice
   # 匹配链接
   urlPatterns: /system/*,/monitor/*,/tool/*
+
+
+# mybatis-plus 配置
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.ruoyi.**.domain
+  configuration:
+    map-underscore-to-camel-case: true
